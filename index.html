@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Tally">
+<meta name="theme-color" content="#0a0a0f">
+<title>Tally</title>
+<style>/* Tailwind CSS (compiled, inlined for offline use) */
+*,:after,:before{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/*! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com*/*,:after,:before{box-sizing:border-box;border:0 solid #e5e7eb}:after,:before{--tw-content:""}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;-o-tab-size:4;tab-size:4;font-family:ui-sans-serif,system-ui,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0}fieldset,legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::-moz-placeholder,textarea::-moz-placeholder{opacity:1;color:#9ca3af}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.visible{visibility:visible}.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.inset-0{inset:0}.inset-x-0{left:0;right:0}.bottom-0{bottom:0}.left-4{left:1rem}.right-0\.5{right:.125rem}.top-0\.5{top:.125rem}.top-1\/2{top:50%}.z-30{z-index:30}.z-40{z-index:40}.z-50{z-index:50}.z-\[60\]{z-index:60}.-mx-4{margin-left:-1rem;margin-right:-1rem}.mx-auto{margin-left:auto;margin-right:auto}.-mt-0\.5{margin-top:-.125rem}.mb-1{margin-bottom:.25rem}.mb-1\.5{margin-bottom:.375rem}.mb-2{margin-bottom:.5rem}.mb-3{margin-bottom:.75rem}.mb-4{margin-bottom:1rem}.mb-5{margin-bottom:1.25rem}.mt-0\.5{margin-top:.125rem}.mt-1{margin-top:.25rem}.mt-1\.5{margin-top:.375rem}.mt-2{margin-top:.5rem}.mt-3{margin-top:.75rem}.mt-4{margin-top:1rem}.mt-6{margin-top:1.5rem}.block{display:block}.flex{display:flex}.grid{display:grid}.hidden{display:none}.h-1\.5{height:.375rem}.h-10{height:2.5rem}.h-11{height:2.75rem}.h-12{height:3rem}.h-14{height:3.5rem}.h-2\.5{height:.625rem}.h-28{height:7rem}.h-3{height:.75rem}.h-36{height:9rem}.h-5{height:1.25rem}.h-9{height:2.25rem}.h-\[118px\]{height:118px}.h-full{height:100%}.min-h-\[100dvh\]{min-height:100dvh}.w-10{width:2.5rem}.w-11{width:2.75rem}.w-12{width:3rem}.w-3{width:.75rem}.w-9{width:2.25rem}.w-full{width:100%}.min-w-0{min-width:0}.max-w-md{max-width:28rem}.flex-1{flex:1 1 0%}.shrink-0{flex-shrink:0}.-translate-y-1\/2{--tw-translate-y:-50%}.-translate-y-1\/2,.transform{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}.flex-col{flex-direction:column}.items-end{align-items:flex-end}.items-center{align-items:center}.justify-end{justify-content:flex-end}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-1{gap:.25rem}.gap-2{gap:.5rem}.gap-2\.5{gap:.625rem}.gap-3{gap:.75rem}.gap-4{gap:1rem}.gap-\[3px\]{gap:3px}.space-y-4>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem*var(--tw-space-y-reverse))}.divide-y>:not([hidden])~:not([hidden]){--tw-divide-y-reverse:0;border-top-width:calc(1px*(1 - var(--tw-divide-y-reverse)));border-bottom-width:calc(1px*var(--tw-divide-y-reverse))}.divide-white\/5>:not([hidden])~:not([hidden]){border-color:hsla(0,0%,100%,.05)}.overflow-hidden{overflow:hidden}.overflow-x-auto{overflow-x:auto}.overflow-y-auto{overflow-y:auto}.truncate{overflow:hidden;text-overflow:ellipsis}.truncate,.whitespace-nowrap{white-space:nowrap}.rounded-2xl{border-radius:1rem}.rounded-3xl{border-radius:1.5rem}.rounded-\[28px\]{border-radius:28px}.rounded-full{border-radius:9999px}.rounded-sm{border-radius:.125rem}.rounded-xl{border-radius:.75rem}.rounded-t-\[32px\]{border-top-left-radius:32px;border-top-right-radius:32px}.rounded-t-\[4px\]{border-top-left-radius:4px;border-top-right-radius:4px}.rounded-t-lg{border-top-left-radius:.5rem;border-top-right-radius:.5rem}.p-1\.5{padding:.375rem}.p-3{padding:.75rem}.p-4{padding:1rem}.p-5{padding:1.25rem}.px-1{padding-left:.25rem;padding-right:.25rem}.px-4{padding-left:1rem;padding-right:1rem}.px-5{padding-left:1.25rem;padding-right:1.25rem}.py-10{padding-top:2.5rem;padding-bottom:2.5rem}.py-3{padding-top:.75rem;padding-bottom:.75rem}.py-4{padding-top:1rem;padding-bottom:1rem}.py-6{padding-top:1.5rem;padding-bottom:1.5rem}.pb-3{padding-bottom:.75rem}.pb-32{padding-bottom:8rem}.pl-11{padding-left:2.75rem}.pr-4{padding-right:1rem}.pt-2{padding-top:.5rem}.pt-3{padding-top:.75rem}.text-left{text-align:left}.text-center{text-align:center}.font-mono{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace}.text-2xl{font-size:1.5rem;line-height:2rem}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-5xl{font-size:3rem;line-height:1}.text-6xl{font-size:3.75rem;line-height:1}.text-\[10px\]{font-size:10px}.text-\[11px\]{font-size:11px}.text-\[17px\]{font-size:17px}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:.75rem;line-height:1rem}.font-bold{font-weight:700}.font-extrabold{font-weight:800}.font-medium{font-weight:500}.font-semibold{font-weight:600}.uppercase{text-transform:uppercase}.leading-none{line-height:1}.leading-tight{line-height:1.25}.tracking-tight{letter-spacing:-.025em}.tracking-widest{letter-spacing:.1em}.text-black{--tw-text-opacity:1;color:rgb(0 0 0/var(--tw-text-opacity,1))}.text-white\/35{color:hsla(0,0%,100%,.35)}.text-white\/40{color:hsla(0,0%,100%,.4)}.text-white\/45{color:hsla(0,0%,100%,.45)}.text-white\/50{color:hsla(0,0%,100%,.5)}.text-white\/60{color:hsla(0,0%,100%,.6)}.text-white\/70{color:hsla(0,0%,100%,.7)}.text-white\/90{color:hsla(0,0%,100%,.9)}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.placeholder-white\/30::-moz-placeholder{color:hsla(0,0%,100%,.3)}.placeholder-white\/30::placeholder{color:hsla(0,0%,100%,.3)}.shadow-2xl{--tw-shadow:0 25px 50px -12px rgba(0,0,0,.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.outline-none{outline:2px solid transparent;outline-offset:2px}.blur{--tw-blur:blur(8px)}.blur,.filter{filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.transition{transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,-webkit-backdrop-filter;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter,-webkit-backdrop-filter;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.ease-out{transition-timing-function:cubic-bezier(0,0,.2,1)}.disabled\:opacity-30:disabled{opacity:.3}</style>
+<style>
+  :root { color-scheme: dark; }
+  html, body { background:#0a0a0f; overscroll-behavior-y: none; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    touch-action: manipulation;
+    color:#f4f4f7;
+  }
+  button, .tap { -webkit-user-select:none; user-select:none; touch-action: manipulation; cursor:pointer; }
+  input, textarea { -webkit-user-select:text; user-select:text; font-size:16px; } /* 16px prevents iOS zoom */
+  .tap { transition: transform .09s ease, filter .09s ease, background-color .15s; will-change: transform; }
+  .tap:active, .tap.pressed { transform: scale(.93); filter: brightness(1.25); }
+  .card { background:#14141b; border:1px solid rgba(255,255,255,.06); border-radius:24px; }
+  .hero { background: radial-gradient(120% 140% at 0% 0%, #2a2150 0%, #14141b 55%); border:1px solid rgba(255,255,255,.08); border-radius:28px; }
+  .safe-b { padding-bottom: calc(env(safe-area-inset-bottom) + 12px); }
+  .safe-t { padding-top: calc(env(safe-area-inset-top) + 14px); }
+  .num { font-variant-numeric: tabular-nums; letter-spacing:-0.02em; }
+  .sheet { transform: translateY(105%); transition: transform .32s cubic-bezier(.2,.9,.25,1); }
+  .sheet.open { transform: translateY(0); }
+  .backdrop { opacity:0; pointer-events:none; transition: opacity .25s; }
+  .backdrop.open { opacity:1; pointer-events:auto; }
+  .bar-fill { transition: width .6s cubic-bezier(.2,.9,.25,1); }
+  .col-fill { transition: height .6s cubic-bezier(.2,.9,.25,1); }
+  .toast { transform: translateY(20px); opacity:0; transition: all .25s; pointer-events:none; }
+  .toast.show { transform: translateY(0); opacity:1; pointer-events:auto; }
+  .ripple { position:absolute; border-radius:9999px; background:rgba(255,255,255,.35); transform:scale(0); animation: rip .5s ease-out forwards; pointer-events:none; }
+  @keyframes rip { to { transform:scale(1); opacity:0; } }
+  .pop { animation: pop .35s cubic-bezier(.2,1.6,.4,1); }
+  @keyframes pop { 0%{transform:scale(.8);opacity:.2} 100%{transform:scale(1);opacity:1} }
+  ::-webkit-scrollbar { display:none; }
+  .chips { scrollbar-width:none; -webkit-overflow-scrolling: touch; }
+  textarea { resize:none; }
+</style>
+</head>
+<body class="min-h-[100dvh]">
+
+<div id="app" class="max-w-md mx-auto px-4 pb-32">
+
+  <!-- Header -->
+  <header class="safe-t flex items-center justify-between pb-3">
+    <div>
+      <h1 class="text-2xl font-extrabold tracking-tight">Tally</h1>
+      <p id="todayLabel" class="text-xs text-white/45 -mt-0.5"></p>
+    </div>
+    <button id="btnSettings" class="tap relative w-11 h-11 rounded-full bg-white/8 flex items-center justify-center text-lg" style="background:rgba(255,255,255,.08)" aria-label="Data and settings">⚙️<span id="syncDot" class="hidden absolute top-0.5 right-0.5 w-3 h-3 rounded-full" style="border:2px solid #0a0a0f"></span></button>
+  </header>
+
+  <!-- LOG TAB -->
+  <section id="tab-log">
+    <div class="hero p-5 mb-4 pop">
+      <p class="text-xs uppercase tracking-widest text-white/50">Spent this month</p>
+      <p id="logMonthTotal" class="num text-5xl font-extrabold mt-1">$0.00</p>
+      <div class="flex gap-4 mt-3 text-sm text-white/60">
+        <span>Today <b id="logToday" class="num text-white/90">$0.00</b></span>
+        <span id="logBudgetNote"></span>
+      </div>
+    </div>
+    <p class="text-xs uppercase tracking-widest text-white/40 mb-2 px-1">Tap a category to log</p>
+    <div id="catGrid" class="grid grid-cols-2 gap-3"></div>
+
+    <p class="text-xs uppercase tracking-widest text-white/40 mt-6 mb-2 px-1">Latest</p>
+    <div id="logRecent" class="card divide-y divide-white/5 overflow-hidden"></div>
+  </section>
+
+  <!-- INSIGHTS TAB -->
+  <section id="tab-insights" class="hidden">
+    <div class="flex items-center justify-between mb-3">
+      <button id="monthPrev" class="tap w-11 h-11 rounded-full text-xl" style="background:rgba(255,255,255,.08)" aria-label="Previous month">‹</button>
+      <div id="monthLabel" class="font-bold text-lg"></div>
+      <button id="monthNext" class="tap w-11 h-11 rounded-full text-xl" style="background:rgba(255,255,255,.08)" aria-label="Next month">›</button>
+    </div>
+
+    <div class="hero p-5 mb-3">
+      <p class="text-xs uppercase tracking-widest text-white/50">Total spent</p>
+      <p id="insTotal" class="num text-5xl font-extrabold mt-1">$0.00</p>
+      <p id="insDelta" class="text-sm mt-1 text-white/60"></p>
+      <div id="insBudget" class="mt-4 hidden">
+        <div class="flex justify-between text-xs text-white/60 mb-1.5">
+          <span id="insBudgetL"></span><span id="insBudgetR"></span>
+        </div>
+        <div class="h-2.5 rounded-full overflow-hidden" style="background:rgba(255,255,255,.1)">
+          <div id="insBudgetBar" class="bar-fill h-full rounded-full" style="width:0%"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-2 gap-3 mb-3">
+      <div class="card p-4"><p class="text-[11px] uppercase tracking-widest text-white/40">Transactions</p><p id="stCount" class="num text-2xl font-bold mt-1">0</p></div>
+      <div class="card p-4"><p class="text-[11px] uppercase tracking-widest text-white/40">Daily avg</p><p id="stAvg" class="num text-2xl font-bold mt-1">$0</p></div>
+      <div class="card p-4"><p class="text-[11px] uppercase tracking-widest text-white/40">Largest</p><p id="stMax" class="num text-2xl font-bold mt-1">$0</p><p id="stMaxSub" class="text-xs text-white/45 truncate"></p></div>
+      <div class="card p-4"><p class="text-[11px] uppercase tracking-widest text-white/40" id="stProjLabel">Projected</p><p id="stProj" class="num text-2xl font-bold mt-1">$0</p></div>
+    </div>
+
+    <div class="card p-5 mb-3">
+      <h2 class="font-bold mb-4">By category</h2>
+      <div id="catBars" class="space-y-4"></div>
+    </div>
+
+    <div class="card p-5 mb-3">
+      <h2 class="font-bold mb-1">Daily spending</h2>
+      <p class="text-xs text-white/40 mb-3">Tap a bar to see the day</p>
+      <div id="dailyChart" class="flex items-end gap-[3px] h-28"></div>
+      <div class="flex justify-between text-[10px] text-white/35 mt-1.5 num"><span>1</span><span id="dailyMid"></span><span id="dailyEnd"></span></div>
+      <p id="dailyInfo" class="text-sm text-white/70 mt-2 h-5 num"></p>
+    </div>
+
+    <div class="card p-5 mb-3">
+      <h2 class="font-bold mb-4">Last 6 months</h2>
+      <div id="trendChart" class="flex items-end gap-3 h-36"></div>
+    </div>
+
+    <button id="btnExport2" class="tap w-full h-14 rounded-2xl font-semibold" style="background:rgba(255,255,255,.08)">Export Data</button>
+  </section>
+
+  <!-- HISTORY TAB -->
+  <section id="tab-history" class="hidden">
+    <div class="relative mb-3">
+      <span class="absolute left-4 top-1/2 -translate-y-1/2 text-white/40">🔍</span>
+      <input id="search" type="search" inputmode="search" enterkeyhint="search" autocomplete="off" placeholder="Search notes, categories, amounts"
+        class="w-full h-12 rounded-2xl pl-11 pr-4 outline-none placeholder-white/30" style="background:#14141b;border:1px solid rgba(255,255,255,.08)">
+    </div>
+    <div id="chips" class="chips flex gap-2 overflow-x-auto pb-3 -mx-4 px-4"></div>
+    <div class="flex items-center justify-between px-1 mb-2">
+      <p id="histCount" class="text-xs text-white/45"></p>
+      <p id="histTotal" class="num text-sm font-semibold"></p>
+    </div>
+    <div id="histList"></div>
+  </section>
+</div>
+
+<!-- Bottom tab bar -->
+<nav class="fixed bottom-0 inset-x-0 z-30">
+  <div class="max-w-md mx-auto safe-b px-4 pt-2" style="background:linear-gradient(to top,#0a0a0f 70%,rgba(10,10,15,0))">
+    <div class="grid grid-cols-3 gap-1 p-1.5 rounded-3xl" style="background:#16161e;border:1px solid rgba(255,255,255,.07)">
+      <button data-tab="log" class="tabbtn tap h-12 rounded-2xl text-sm font-semibold flex flex-col items-center justify-center leading-none gap-1"><span class="text-lg">➕</span>Log</button>
+      <button data-tab="insights" class="tabbtn tap h-12 rounded-2xl text-sm font-semibold flex flex-col items-center justify-center leading-none gap-1"><span class="text-lg">📊</span>Insights</button>
+      <button data-tab="history" class="tabbtn tap h-12 rounded-2xl text-sm font-semibold flex flex-col items-center justify-center leading-none gap-1"><span class="text-lg">🧾</span>History</button>
+    </div>
+  </div>
+</nav>
+
+<!-- Backdrop -->
+<div id="backdrop" class="backdrop fixed inset-0 z-40" style="background:rgba(0,0,0,.6);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)"></div>
+
+<!-- Log sheet -->
+<div id="logSheet" class="sheet fixed inset-x-0 bottom-0 z-50">
+  <div class="max-w-md mx-auto rounded-t-[32px] px-5 pt-3 safe-b overflow-y-auto" style="background:#13131a;border:1px solid rgba(255,255,255,.08);max-height:94dvh">
+    <div class="w-10 h-1.5 rounded-full mx-auto mb-3" style="background:rgba(255,255,255,.2)"></div>
+    <div class="flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div id="shIcon" class="w-12 h-12 rounded-2xl flex items-center justify-center text-2xl"></div>
+        <div><p class="text-xs text-white/45">Logging</p><p id="shName" class="font-bold text-lg leading-tight"></p></div>
+      </div>
+      <button id="shClose" class="tap w-10 h-10 rounded-full" style="background:rgba(255,255,255,.08)" aria-label="Close">✕</button>
+    </div>
+    <div class="text-center py-4">
+      <p id="shAmt" class="num text-6xl font-extrabold">$0</p>
+    </div>
+    <input id="shNote" type="text" maxlength="80" autocomplete="off" enterkeyhint="done" placeholder="Note (optional) — e.g. Trader Joe's"
+      class="w-full h-12 rounded-2xl px-4 outline-none placeholder-white/30 mb-3" style="background:#1c1c26;border:1px solid rgba(255,255,255,.08)">
+    <div id="keypad" class="grid grid-cols-3 gap-2.5 mb-3"></div>
+    <button id="shLog" class="tap w-full h-14 rounded-2xl text-lg font-bold text-black disabled:opacity-30" disabled>Log Expense</button>
+  </div>
+</div>
+
+<!-- Settings / data sheet -->
+<div id="setSheet" class="sheet fixed inset-x-0 bottom-0 z-50">
+  <div class="max-w-md mx-auto rounded-t-[32px] px-5 pt-3 safe-b overflow-y-auto" style="background:#13131a;border:1px solid rgba(255,255,255,.08);max-height:94dvh">
+    <div class="w-10 h-1.5 rounded-full mx-auto mb-3" style="background:rgba(255,255,255,.2)"></div>
+    <div class="flex items-center justify-between mb-4">
+      <h2 class="font-bold text-xl">Data &amp; Settings</h2>
+      <button id="setClose" class="tap w-10 h-10 rounded-full" style="background:rgba(255,255,255,.08)" aria-label="Close">✕</button>
+    </div>
+
+    <div class="grid grid-cols-2 gap-3 mb-5">
+      <label class="block">
+        <span class="text-xs text-white/45">Currency symbol</span>
+        <input id="setCur" type="text" maxlength="3" class="mt-1 w-full h-12 rounded-2xl px-4 outline-none" style="background:#1c1c26;border:1px solid rgba(255,255,255,.08)">
+      </label>
+      <label class="block">
+        <span class="text-xs text-white/45">Monthly budget (0 = off)</span>
+        <input id="setBudget" type="number" inputmode="decimal" min="0" class="mt-1 w-full h-12 rounded-2xl px-4 outline-none" style="background:#1c1c26;border:1px solid rgba(255,255,255,.08)">
+      </label>
+    </div>
+
+    <h3 class="font-semibold mb-1">Cloud sync (GitHub)</h3>
+    <p id="syncStatus" class="text-xs text-white/45 mb-2">Not connected — data stays on this device only.</p>
+    <input id="syncRepo" type="text" autocapitalize="off" autocorrect="off" spellcheck="false" placeholder="your-username/tally-data"
+      class="w-full h-12 rounded-2xl px-4 outline-none placeholder-white/30 mb-2" style="background:#1c1c26;border:1px solid rgba(255,255,255,.08)">
+    <input id="syncToken" type="password" autocapitalize="off" autocorrect="off" spellcheck="false" autocomplete="off" placeholder="Access token (github_pat_…)"
+      class="w-full h-12 rounded-2xl px-4 outline-none placeholder-white/30" style="background:#1c1c26;border:1px solid rgba(255,255,255,.08)">
+    <div class="grid grid-cols-2 gap-2 mt-2 mb-5">
+      <button id="btnSyncSave" class="tap h-12 rounded-2xl font-bold text-black" style="background:#4ade80">Save &amp; Sync now</button>
+      <button id="btnSyncOff" class="tap h-12 rounded-2xl font-semibold" style="background:rgba(255,255,255,.1)">Disconnect</button>
+    </div>
+
+    <h3 class="font-semibold mb-2">Export</h3>
+    <div class="grid grid-cols-2 gap-2 mb-2">
+      <button id="fmtCsv" class="tap h-11 rounded-xl font-semibold">CSV</button>
+      <button id="fmtJson" class="tap h-11 rounded-xl font-semibold">JSON</button>
+    </div>
+    <textarea id="exportBox" readonly rows="6" class="w-full rounded-2xl p-3 text-xs outline-none font-mono" style="background:#0d0d12;border:1px solid rgba(255,255,255,.08);font-size:12px"></textarea>
+    <div class="grid grid-cols-2 gap-2 mt-2 mb-5">
+      <button id="btnCopy" class="tap h-12 rounded-2xl font-bold text-black" style="background:#a78bfa">Copy</button>
+      <button id="btnDownload" class="tap h-12 rounded-2xl font-semibold" style="background:rgba(255,255,255,.1)">Download file</button>
+    </div>
+
+    <h3 class="font-semibold mb-2">Restore from backup</h3>
+    <textarea id="importBox" rows="3" placeholder="Paste a JSON backup here" class="w-full rounded-2xl p-3 outline-none placeholder-white/30" style="background:#0d0d12;border:1px solid rgba(255,255,255,.08);font-size:16px"></textarea>
+    <button id="btnImport" class="tap w-full h-12 rounded-2xl font-semibold mt-2 mb-5" style="background:rgba(255,255,255,.1)">Import (merge)</button>
+
+    <button id="btnWipe" class="tap w-full h-12 rounded-2xl font-semibold mb-2" style="background:rgba(248,113,113,.15);color:#fca5a5">Erase all data</button>
+    <p class="text-[11px] text-white/35 text-center mb-2">Everything is stored only on this device in Safari.</p>
+  </div>
+</div>
+
+<!-- Toast -->
+<div id="toast" class="toast fixed inset-x-0 z-[60] flex justify-center px-4" style="bottom:calc(env(safe-area-inset-bottom) + 100px)">
+  <div class="flex items-center gap-4 rounded-2xl px-4 py-3 text-sm font-medium shadow-2xl" style="background:#2a2a36;border:1px solid rgba(255,255,255,.1)">
+    <span id="toastMsg"></span>
+    <button id="toastAct" class="tap font-bold hidden" style="color:#a78bfa"></button>
+  </div>
+</div>
+
+<script>
+(() => {
+  'use strict';
+
+  /* ---------- Config ---------- */
+  const CATS = [
+    { id:'Transport',     icon:'🚌', color:'#38bdf8' },
+    { id:'Grocery',       icon:'🛒', color:'#4ade80' },
+    { id:'Shopping',      icon:'🛍️', color:'#f472b6' },
+    { id:'Food',          icon:'🍔', color:'#fb923c' },
+    { id:'Personal',      icon:'🧴', color:'#a78bfa' },
+    { id:'Entertainment', icon:'🎬', color:'#facc15' },
+    { id:'Bills',         icon:'🧾', color:'#f87171' },
+    { id:'Other',         icon:'✨', color:'#94a3b8' },
+  ];
+  const CAT = Object.fromEntries(CATS.map(c => [c.id, c]));
+  const KEY = 'tally.v1';
+  const $ = id => document.getElementById(id);
+
+  /* ---------- Storage ---------- */
+  let storageOK = true;
+  let db = { tx: [], deleted: {}, settings: { currency: '$', budget: 0 } };
+  function load() {
+    try {
+      const raw = localStorage.getItem(KEY);
+      if (raw) {
+        const p = JSON.parse(raw);
+        db.tx = Array.isArray(p.tx) ? p.tx : [];
+        db.deleted = (p.deleted && typeof p.deleted === 'object') ? p.deleted : {};
+        db.settings = Object.assign({ currency: '$', budget: 0 }, p.settings || {});
+      }
+    } catch (e) { storageOK = false; }
+  }
+  function save(skipSync) {
+    try { localStorage.setItem(KEY, JSON.stringify(db)); }
+    catch (e) { storageOK = false; toast('Storage unavailable — data won\u2019t persist'); }
+    if (!skipSync) scheduleSync();
+  }
+  load();
+  try { navigator.storage && navigator.storage.persist && navigator.storage.persist(); } catch (e) {}
+
+  /* ---------- Helpers ---------- */
+  const esc = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  const cur = () => db.settings.currency || '$';
+  const money = (n, dec = 2) => cur() + Number(n).toLocaleString(undefined, { minimumFractionDigits: dec, maximumFractionDigits: dec });
+  const moneyShort = n => n >= 10000 ? cur() + (n/1000).toFixed(1) + 'k' : cur() + Math.round(n).toLocaleString();
+  const mIdx = d => d.getFullYear() * 12 + d.getMonth();
+  const monthName = (idx, long = true) => new Date(Math.floor(idx/12), idx % 12, 1).toLocaleString(undefined, { month: long ? 'long' : 'short', year: long ? 'numeric' : undefined });
+  const daysIn = idx => new Date(Math.floor(idx/12), (idx % 12) + 1, 0).getDate();
+  const sameDay = (a, b) => a.toDateString() === b.toDateString();
+  function dayLabel(ts) {
+    const d = new Date(ts), t = new Date(), y = new Date(); y.setDate(t.getDate() - 1);
+    if (sameDay(d, t)) return 'Today';
+    if (sameDay(d, y)) return 'Yesterday';
+    return d.toLocaleDateString(undefined, { weekday: 'short', month: 'short', day: 'numeric', year: d.getFullYear() !== t.getFullYear() ? 'numeric' : undefined });
+  }
+  const timeLabel = ts => new Date(ts).toLocaleTimeString(undefined, { hour: 'numeric', minute: '2-digit' });
+  const sum = arr => arr.reduce((a, t) => a + t.amt, 0);
+  const txMonth = idx => db.tx.filter(t => mIdx(new Date(t.ts)) === idx);
+  const uid = () => Date.now().toString(36) + Math.random().toString(36).slice(2, 7);
+  const buzz = (ms = 10) => { try { navigator.vibrate && navigator.vibrate(ms); } catch (e) {} };
+
+  /* ---------- Press feedback (haptic-like) ---------- */
+  document.addEventListener('pointerdown', e => {
+    const el = e.target.closest('.tap');
+    if (!el) return;
+    el.classList.add('pressed');
+    buzz(8);
+    if (el.classList.contains('cat-btn')) {
+      const r = el.getBoundingClientRect();
+      const s = Math.max(r.width, r.height) * 2;
+      const rp = document.createElement('span');
+      rp.className = 'ripple';
+      rp.style.cssText = `width:${s}px;height:${s}px;left:${e.clientX - r.left - s/2}px;top:${e.clientY - r.top - s/2}px`;
+      el.appendChild(rp);
+      setTimeout(() => rp.remove(), 520);
+    }
+    const off = () => { el.classList.remove('pressed'); };
+    el.addEventListener('pointerup', off, { once: true });
+    el.addEventListener('pointercancel', off, { once: true });
+    el.addEventListener('pointerleave', off, { once: true });
+  }, { passive: true });
+
+  /* ---------- Toast ---------- */
+  let toastT;
+  function toast(msg, actLabel, act) {
+    $('toastMsg').textContent = msg;
+    const b = $('toastAct');
+    if (actLabel) { b.textContent = actLabel; b.classList.remove('hidden'); b.onclick = () => { act && act(); hideToast(); }; }
+    else { b.classList.add('hidden'); b.onclick = null; }
+    $('toast').classList.add('show');
+    clearTimeout(toastT);
+    toastT = setTimeout(hideToast, actLabel ? 4500 : 2200);
+  }
+  function hideToast() { $('toast').classList.remove('show'); }
+
+  /* ---------- Tabs ---------- */
+  let tab = 'log';
+  function setTab(t) {
+    tab = t;
+    ['log', 'insights', 'history'].forEach(n => $('tab-' + n).classList.toggle('hidden', n !== t));
+    document.querySelectorAll('.tabbtn').forEach(b => {
+      const on = b.dataset.tab === t;
+      b.style.background = on ? 'rgba(167,139,250,.18)' : 'transparent';
+      b.style.color = on ? '#c4b5fd' : 'rgba(255,255,255,.5)';
+    });
+    window.scrollTo(0, 0);
+    render();
+  }
+  document.querySelectorAll('.tabbtn').forEach(b => b.addEventListener('click', () => setTab(b.dataset.tab)));
+
+  /* ---------- Sheets ---------- */
+  function openSheet(id) { $(id).classList.add('open'); $('backdrop').classList.add('open'); document.body.style.overflow = 'hidden'; }
+  function closeSheets() {
+    document.querySelectorAll('.sheet').forEach(s => s.classList.remove('open'));
+    $('backdrop').classList.remove('open');
+    document.body.style.overflow = '';
+    if (document.activeElement && document.activeElement.blur) document.activeElement.blur();
+  }
+  $('backdrop').addEventListener('click', closeSheets);
+  $('shClose').addEventListener('click', closeSheets);
+  $('setClose').addEventListener('click', () => { saveSettings(); closeSheets(); render(); });
+
+  /* ---------- Category grid ---------- */
+  function renderGrid() {
+    const month = txMonth(mIdx(new Date()));
+    const by = {}; month.forEach(t => by[t.cat] = (by[t.cat] || 0) + t.amt);
+    $('catGrid').innerHTML = CATS.map(c => `
+      <button data-cat="${c.id}" class="cat-btn tap relative overflow-hidden rounded-[28px] p-4 h-[118px] text-left flex flex-col justify-between"
+        style="background:linear-gradient(145deg, ${c.color}33 0%, #14141b 75%);border:1px solid ${c.color}40;box-shadow:0 8px 24px -12px ${c.color}66">
+        <span class="text-3xl leading-none">${c.icon}</span>
+        <span>
+          <span class="block font-bold text-[17px] leading-tight">${c.id}</span>
+          <span class="block num text-xs mt-0.5" style="color:${c.color}">${by[c.id] ? money(by[c.id], 0) : 'this month'}</span>
+        </span>
+      </button>`).join('');
+  }
+  $('catGrid').addEventListener('click', e => {
+    const b = e.target.closest('[data-cat]');
+    if (b) openLog(b.dataset.cat);
+  });
+
+  /* ---------- Log flow ---------- */
+  let draft = { cat: null, str: '0' };
+  const KEYS = ['1','2','3','4','5','6','7','8','9','.','0','⌫'];
+  $('keypad').innerHTML = KEYS.map(k => `<button data-k="${k}" class="tap h-14 rounded-2xl text-2xl font-semibold num" style="background:rgba(255,255,255,.09)">${k}</button>`).join('');
+  $('keypad').addEventListener('click', e => { const b = e.target.closest('[data-k]'); if (b) pressKey(b.dataset.k); });
+
+  function pressKey(k) {
+    let s = draft.str;
+    if (k === '⌫' || k === 'Backspace') s = s.length > 1 ? s.slice(0, -1) : '0';
+    else if (k === '.') { if (!s.includes('.')) s += '.'; }
+    else if (/^\d$/.test(k)) {
+      const n = s === '0' ? k : s + k;
+      const [i, d] = n.split('.');
+      if ((d !== undefined && d.length > 2) || i.length > 7) return;
+      s = n;
+    } else return;
+    draft.str = s;
+    paintAmt();
+  }
+  function paintAmt() {
+    const [i, d] = draft.str.split('.');
+    const txt = cur() + Number(i).toLocaleString() + (d !== undefined ? '.' + d : '');
+    const el = $('shAmt');
+    el.textContent = txt;
+    el.style.fontSize = txt.length > 11 ? '2.5rem' : txt.length > 8 ? '3.25rem' : '3.75rem';
+    $('shLog').disabled = !(parseFloat(draft.str) > 0);
+  }
+  function openLog(catId) {
+    const c = CAT[catId];
+    draft = { cat: catId, str: '0' };
+    $('shIcon').textContent = c.icon;
+    $('shIcon').style.background = c.color + '2e';
+    $('shName').textContent = c.id;
+    $('shLog').style.background = c.color;
+    $('shNote').value = '';
+    paintAmt();
+    openSheet('logSheet');
+  }
+  function commitLog() {
+    const amt = Math.round(parseFloat(draft.str) * 100) / 100;
+    if (!(amt > 0)) return;
+    const t = { id: uid(), cat: draft.cat, amt, note: $('shNote').value.trim(), ts: Date.now() };
+    db.tx.push(t);
+    save();
+    buzz(25);
+    closeSheets();
+    render();
+    toast(`Logged ${money(amt)} · ${t.cat}`, 'Undo', () => { db.tx = db.tx.filter(x => x.id !== t.id); db.deleted[t.id] = Date.now(); save(); render(); });
+  }
+  $('shLog').addEventListener('click', commitLog);
+  $('shNote').addEventListener('keydown', e => { if (e.key === 'Enter') { e.preventDefault(); $('shNote').blur(); } });
+  document.addEventListener('keydown', e => { // desktop convenience
+    if ($('logSheet').classList.contains('open') && document.activeElement !== $('shNote')) {
+      if (e.key === 'Enter') commitLog();
+      else if (e.key === 'Escape') closeSheets();
+      else pressKey(e.key);
+    }
+  });
+
+  /* ---------- Rows ---------- */
+  function rowHTML(t, withDelete) {
+    const c = CAT[t.cat] || CAT.Other;
+    return `<div class="flex items-center gap-3 px-4 py-3">
+      <div class="w-11 h-11 shrink-0 rounded-2xl flex items-center justify-center text-xl" style="background:${c.color}26">${c.icon}</div>
+      <div class="min-w-0 flex-1">
+        <p class="font-semibold leading-tight truncate">${esc(t.note || t.cat)}</p>
+        <p class="text-xs text-white/45 truncate">${t.note ? esc(t.cat) + ' · ' : ''}${dayLabel(t.ts)}, ${timeLabel(t.ts)}</p>
+      </div>
+      <p class="num font-bold shrink-0">${money(t.amt)}</p>
+      ${withDelete ? `<button data-del="${t.id}" class="tap w-9 h-9 shrink-0 rounded-full text-white/50" style="background:rgba(255,255,255,.06)" aria-label="Delete">🗑</button>` : ''}
+    </div>`;
+  }
+  function deleteTx(id) {
+    const i = db.tx.findIndex(t => t.id === id);
+    if (i < 0) return;
+    const [removed] = db.tx.splice(i, 1);
+    db.deleted[removed.id] = Date.now();
+    save(); render();
+    toast('Deleted', 'Undo', () => { db.tx.push(removed); delete db.deleted[removed.id]; save(); render(); });
+  }
+
+  /* ---------- Log tab ---------- */
+  function renderLog() {
+    const now = new Date(), m = txMonth(mIdx(now));
+    $('logMonthTotal').textContent = money(sum(m));
+    $('logToday').textContent = money(sum(db.tx.filter(t => sameDay(new Date(t.ts), now))));
+    const b = +db.settings.budget;
+    $('logBudgetNote').innerHTML = b > 0 ? `· <b class="num text-white/90">${money(Math.max(b - sum(m), 0), 0)}</b> left` : '';
+    renderGrid();
+    const recent = [...db.tx].sort((a, b) => b.ts - a.ts).slice(0, 3);
+    $('logRecent').innerHTML = recent.length ? recent.map(t => rowHTML(t, false)).join('') :
+      '<p class="text-center text-white/35 text-sm py-6">Nothing logged yet — tap a category above.</p>';
+  }
+
+  /* ---------- Insights tab ---------- */
+  const nowIdx = mIdx(new Date());
+  let viewIdx = nowIdx;
+  $('monthPrev').addEventListener('click', () => { viewIdx--; renderInsights(); });
+  $('monthNext').addEventListener('click', () => { if (viewIdx < nowIdx) { viewIdx++; renderInsights(); } });
+
+  function renderInsights() {
+    $('monthLabel').textContent = monthName(viewIdx);
+    $('monthNext').style.opacity = viewIdx >= nowIdx ? .25 : 1;
+    const m = txMonth(viewIdx), total = sum(m), isNow = viewIdx === nowIdx;
+    const dim = daysIn(viewIdx), today = new Date().getDate();
+    $('insTotal').textContent = money(total);
+
+    const prev = sum(txMonth(viewIdx - 1));
+    if (prev > 0) {
+      const pct = ((total - prev) / prev) * 100;
+      const up = pct > 0;
+      $('insDelta').innerHTML = `<span style="color:${up ? '#fca5a5' : '#86efac'}">${up ? '▲' : '▼'} ${Math.abs(pct).toFixed(0)}%</span> vs ${monthName(viewIdx - 1, false)} (${money(prev, 0)})`;
+    } else $('insDelta').textContent = total ? 'No data for previous month' : 'Nothing spent this month';
+
+    const bud = +db.settings.budget;
+    $('insBudget').classList.toggle('hidden', !(bud > 0));
+    if (bud > 0) {
+      const p = total / bud;
+      $('insBudgetL').textContent = `Budget ${money(bud, 0)}`;
+      $('insBudgetR').textContent = p > 1 ? `${money(total - bud, 0)} over` : `${money(bud - total, 0)} left`;
+      const bar = $('insBudgetBar');
+      bar.style.width = Math.min(p * 100, 100) + '%';
+      bar.style.background = p > 1 ? '#f87171' : p > .8 ? '#facc15' : '#4ade80';
+    }
+
+    const denom = isNow ? today : dim;
+    const avg = total / denom;
+    $('stCount').textContent = m.length;
+    $('stAvg').textContent = money(avg, 0);
+    const big = m.reduce((a, t) => (!a || t.amt > a.amt) ? t : a, null);
+    $('stMax').textContent = big ? money(big.amt, 0) : '—';
+    $('stMaxSub').textContent = big ? (big.note || big.cat) : '';
+    $('stProjLabel').textContent = isNow ? 'Projected month' : 'Busiest day';
+    if (isNow) $('stProj').textContent = money(avg * dim, 0);
+    else {
+      const days = {}; m.forEach(t => { const d = new Date(t.ts).getDate(); days[d] = (days[d] || 0) + t.amt; });
+      const top = Object.entries(days).sort((a, b) => b[1] - a[1])[0];
+      $('stProj').textContent = top ? money(top[1], 0) : '—';
+    }
+
+    // Category bars
+    const by = {}; m.forEach(t => by[t.cat] = (by[t.cat] || 0) + t.amt);
+    const rows = CATS.map(c => ({ ...c, v: by[c.id] || 0 })).sort((a, b) => b.v - a.v);
+    const maxV = Math.max(...rows.map(r => r.v), 1);
+    $('catBars').innerHTML = total === 0 ? '<p class="text-sm text-white/35 text-center py-3">No spending to break down yet.</p>' :
+      rows.map(r => `
+        <div>
+          <div class="flex items-center justify-between mb-1.5">
+            <span class="flex items-center gap-2 text-sm font-semibold"><span>${r.icon}</span>${r.id}</span>
+            <span class="num text-sm"><b>${money(r.v)}</b> <span class="text-white/40">${(r.v / total * 100).toFixed(0)}%</span></span>
+          </div>
+          <div class="h-3 rounded-full overflow-hidden" style="background:rgba(255,255,255,.07)">
+            <div class="bar-fill h-full rounded-full" style="width:${r.v / maxV * 100}%;background:${r.color}"></div>
+          </div>
+        </div>`).join('');
+
+    // Daily chart
+    const perDay = Array(dim).fill(0); m.forEach(t => perDay[new Date(t.ts).getDate() - 1] += t.amt);
+    const maxD = Math.max(...perDay, 1);
+    $('dailyChart').innerHTML = perDay.map((v, i) => {
+      const isToday = isNow && i + 1 === today;
+      return `<button data-day="${i}" class="col flex-1 h-full flex items-end rounded-sm" aria-label="Day ${i + 1}"><span class="col-fill block w-full rounded-t-[4px]" style="height:${v ? Math.max(v / maxD * 100, 4) : 2}%;background:${v ? (isToday ? '#c4b5fd' : '#8b5cf6') : 'rgba(255,255,255,.1)'}"></span></button>`;
+    }).join('');
+    $('dailyMid').textContent = Math.ceil(dim / 2);
+    $('dailyEnd').textContent = dim;
+    $('dailyInfo').textContent = '';
+    $('dailyChart').onclick = e => {
+      const b = e.target.closest('[data-day]'); if (!b) return;
+      const i = +b.dataset.day;
+      const d = new Date(Math.floor(viewIdx / 12), viewIdx % 12, i + 1);
+      $('dailyInfo').textContent = `${d.toLocaleDateString(undefined, { weekday: 'short', month: 'short', day: 'numeric' })} — ${money(perDay[i])}`;
+    };
+
+    // 6-month trend
+    const months = [...Array(6)].map((_, i) => viewIdx - 5 + i);
+    const vals = months.map(i => sum(txMonth(i)));
+    const maxM = Math.max(...vals, 1);
+    $('trendChart').innerHTML = months.map((mi, i) => `
+      <div class="flex-1 h-full flex flex-col justify-end items-center gap-1">
+        <span class="num text-[10px] text-white/50">${vals[i] ? moneyShort(vals[i]) : ''}</span>
+        <div class="col-fill w-full rounded-t-lg" style="height:${vals[i] ? Math.max(vals[i] / maxM * 70, 4) : 2}%;background:${mi === viewIdx ? '#a78bfa' : 'rgba(255,255,255,.14)'}"></div>
+        <span class="text-[10px] text-white/45">${monthName(mi, false)}</span>
+      </div>`).join('');
+  }
+  $('btnExport2').addEventListener('click', openSettings);
+
+  /* ---------- History tab ---------- */
+  let q = '', catFilter = 'All';
+  function renderChips() {
+    $('chips').innerHTML = ['All', ...CATS.map(c => c.id)].map(id => {
+      const on = catFilter === id, c = CAT[id];
+      return `<button data-chip="${id}" class="tap shrink-0 h-10 px-4 rounded-full text-sm font-semibold whitespace-nowrap"
+        style="background:${on ? (c ? c.color : '#f4f4f7') : 'rgba(255,255,255,.07)'};color:${on ? '#0a0a0f' : 'rgba(255,255,255,.75)'}">${c ? c.icon + ' ' : ''}${id}</button>`;
+    }).join('');
+  }
+  $('chips').addEventListener('click', e => { const b = e.target.closest('[data-chip]'); if (b) { catFilter = b.dataset.chip; renderHistory(); } });
+  $('search').addEventListener('input', e => { q = e.target.value.trim().toLowerCase(); renderHistory(); });
+  $('histList').addEventListener('click', e => { const b = e.target.closest('[data-del]'); if (b) deleteTx(b.dataset.del); });
+
+  function renderHistory() {
+    renderChips();
+    const list = db.tx.filter(t => {
+      if (catFilter !== 'All' && t.cat !== catFilter) return false;
+      if (!q) return true;
+      const hay = `${t.cat} ${t.note} ${t.amt} ${t.amt.toFixed(2)} ${dayLabel(t.ts)} ${new Date(t.ts).toLocaleDateString()}`.toLowerCase();
+      return hay.includes(q);
+    }).sort((a, b) => b.ts - a.ts);
+    $('histCount').textContent = `${list.length} transaction${list.length === 1 ? '' : 's'}`;
+    $('histTotal').textContent = money(sum(list));
+    if (!list.length) { $('histList').innerHTML = `<div class="card text-center text-white/35 text-sm py-10">${db.tx.length ? 'No matches.' : 'No transactions yet.'}</div>`; return; }
+    let html = '', lastDay = '', open = false;
+    list.slice(0, 300).forEach(t => {
+      const dl = dayLabel(t.ts);
+      if (dl !== lastDay) {
+        if (open) html += '</div>';
+        const dayTotal = sum(list.filter(x => dayLabel(x.ts) === dl));
+        html += `<div class="flex justify-between items-end px-1 mt-4 mb-1.5"><p class="text-xs uppercase tracking-widest text-white/40">${dl}</p><p class="num text-xs text-white/40">${money(dayTotal)}</p></div><div class="card divide-y divide-white/5 overflow-hidden">`;
+        lastDay = dl; open = true;
+      }
+      html += rowHTML(t, true);
+    });
+    if (open) html += '</div>';
+    if (list.length > 300) html += `<p class="text-center text-xs text-white/35 mt-4">Showing latest 300 — refine your search to see more.</p>`;
+    $('histList').innerHTML = html;
+  }
+
+  /* ---------- Settings & export ---------- */
+  let fmt = 'csv';
+  function toCSV() {
+    const cell = v => { let s = String(v); if (/^[=+\-@]/.test(s)) s = "'" + s; return /[",\n\r]/.test(s) ? '"' + s.replace(/"/g, '""') + '"' : s; };
+    const rows = [...db.tx].sort((a, b) => a.ts - b.ts).map(t => {
+      const d = new Date(t.ts), p = n => String(n).padStart(2, '0');
+      return [t.id, `${d.getFullYear()}-${p(d.getMonth() + 1)}-${p(d.getDate())}`, `${p(d.getHours())}:${p(d.getMinutes())}`, t.cat, t.amt.toFixed(2), t.note].map(cell).join(',');
+    });
+    return ['id,date,time,category,amount,note', ...rows].join('\n');
+  }
+  const toJSON = () => JSON.stringify({ app: 'tally', version: 1, exported: new Date().toISOString(), settings: db.settings, tx: db.tx }, null, 2);
+  function paintExport() {
+    $('exportBox').value = fmt === 'csv' ? toCSV() : toJSON();
+    $('fmtCsv').style.cssText = $('fmtJson').style.cssText = 'background:rgba(255,255,255,.07);color:rgba(255,255,255,.6)';
+    $(fmt === 'csv' ? 'fmtCsv' : 'fmtJson').style.cssText = 'background:rgba(167,139,250,.25);color:#ddd6fe';
+  }
+  $('fmtCsv').addEventListener('click', () => { fmt = 'csv'; paintExport(); });
+  $('fmtJson').addEventListener('click', () => { fmt = 'json'; paintExport(); });
+  function openSettings() {
+    $('setCur').value = cur();
+    $('setBudget').value = db.settings.budget || '';
+    $('importBox').value = '';
+    wipeArmed = false; $('btnWipe').textContent = 'Erase all data';
+    $('syncRepo').value = sync.repo || '';
+    $('syncToken').value = '';
+    $('syncToken').placeholder = sync.token ? 'Token saved ✓ (paste a new one to replace)' : 'Access token (github_pat_…)';
+    paintSync();
+    paintExport();
+    openSheet('setSheet');
+  }
+  function saveSettings() {
+    const c = ($('setCur').value.trim() || '$').slice(0, 3);
+    const b = Math.max(parseFloat($('setBudget').value) || 0, 0);
+    if (c !== db.settings.currency || b !== (+db.settings.budget || 0)) {
+      db.settings.currency = c; db.settings.budget = b; db.settings.updated = Date.now();
+      save();
+    }
+  }
+  $('btnSettings').addEventListener('click', openSettings);
+
+  $('btnCopy').addEventListener('click', async () => {
+    const box = $('exportBox'), text = box.value;
+    try { await navigator.clipboard.writeText(text); toast('Copied to clipboard'); return; } catch (e) {}
+    try { box.removeAttribute('readonly'); box.focus(); box.select(); box.setSelectionRange(0, text.length); const ok = document.execCommand('copy'); box.setAttribute('readonly', ''); box.blur(); toast(ok ? 'Copied to clipboard' : 'Press and hold the text to copy'); }
+    catch (e) { toast('Press and hold the text to copy'); }
+  });
+  $('btnDownload').addEventListener('click', () => {
+    try {
+      const blob = new Blob([$('exportBox').value], { type: fmt === 'csv' ? 'text/csv' : 'application/json' });
+      const url = URL.createObjectURL(blob), a = document.createElement('a');
+      a.href = url; a.download = `tally-${new Date().toISOString().slice(0, 10)}.${fmt}`;
+      document.body.appendChild(a); a.click(); a.remove();
+      setTimeout(() => URL.revokeObjectURL(url), 4000);
+    } catch (e) { toast('Download blocked — use Copy instead'); }
+  });
+  $('btnImport').addEventListener('click', () => {
+    try {
+      const p = JSON.parse($('importBox').value);
+      const arr = Array.isArray(p) ? p : p.tx;
+      if (!Array.isArray(arr)) throw 0;
+      const have = new Set(db.tx.map(t => t.id));
+      let n = 0;
+      arr.forEach(t => {
+        const amt = Math.round(parseFloat(t.amt) * 100) / 100, ts = Number(t.ts);
+        if (!CAT[t.cat] || !(amt > 0) || !isFinite(ts)) return;
+        const id = t.id || uid();
+        if (have.has(id)) return;
+        have.add(id); delete db.deleted[id];
+        db.tx.push({ id, cat: t.cat, amt, note: String(t.note || '').slice(0, 80), ts });
+        n++;
+      });
+      if (!Array.isArray(p) && p.settings && typeof p.settings === 'object') {
+        if (p.settings.currency) db.settings.currency = String(p.settings.currency).slice(0, 3);
+        if (isFinite(+p.settings.budget)) db.settings.budget = +p.settings.budget;
+        db.settings.updated = Date.now();
+      }
+      save(); render(); paintExport();
+      $('setCur').value = cur(); $('setBudget').value = db.settings.budget || '';
+      $('importBox').value = '';
+      toast(`Imported ${n} transaction${n === 1 ? '' : 's'}`);
+    } catch (e) { toast('That doesn’t look like a valid JSON backup'); }
+  });
+  let wipeArmed = false;
+  $('btnWipe').addEventListener('click', () => {
+    if (!wipeArmed) { wipeArmed = true; $('btnWipe').textContent = 'Tap again to permanently erase'; setTimeout(() => { wipeArmed = false; $('btnWipe').textContent = 'Erase all data'; }, 3500); return; }
+    db.tx.forEach(t => db.deleted[t.id] = Date.now()); db.tx = []; save(); wipeArmed = false; $('btnWipe').textContent = 'Erase all data';
+    render(); paintExport(); toast('All data erased');
+  });
+
+  /* ---------- GitHub sync ---------- */
+  const SKEY = 'tally.sync';
+  let sync = { repo: '', token: '', path: 'data.json' };
+  try { Object.assign(sync, JSON.parse(localStorage.getItem(SKEY) || '{}')); } catch (e) {}
+  const persistSync = () => { try { localStorage.setItem(SKEY, JSON.stringify(sync)); } catch (e) {} };
+  let syncState = 'off', syncMsg = '', syncBusy = false, syncAgain = false, syncTimer = null;
+  const isSynced = () => !!(sync.repo && sync.token);
+  const enc = s => btoa(unescape(encodeURIComponent(s)));
+  const dec = s => decodeURIComponent(escape(atob(s.replace(/\s/g, ''))));
+
+  function setSyncState(s, msg) { syncState = s; syncMsg = msg || ''; paintSync(); }
+  function paintSync() {
+    const dot = $('syncDot'), el = $('syncStatus');
+    dot.classList.toggle('hidden', !isSynced());
+    dot.style.background = ({ ok: '#4ade80', busy: '#facc15', err: '#f87171' })[syncState] || '#94a3b8';
+    el.textContent = !isSynced() ? 'Not connected — data stays on this device only.'
+      : syncState === 'busy' ? 'Syncing…' : syncState === 'err' ? syncMsg : (syncMsg || 'Connected');
+    el.style.color = syncState === 'err' ? '#fca5a5' : '';
+  }
+  function canon(d) {
+    const tx = [...(d.tx || [])].sort((a, b) => (a.ts - b.ts) || (a.id < b.id ? -1 : 1));
+    const del = {}; Object.keys(d.deleted || {}).sort().forEach(k => del[k] = d.deleted[k]);
+    return JSON.stringify({ app: 'tally', version: 2, settings: d.settings || {}, deleted: del, tx }, null, 1);
+  }
+  function mergeDB(a, b) {
+    const deleted = Object.assign({}, b.deleted || {}, a.deleted || {});
+    const map = new Map();
+    [...(b.tx || []), ...a.tx].forEach(t => {
+      const amt = t && parseFloat(t.amt);
+      if (t && t.id && !deleted[t.id] && CAT[t.cat] && amt > 0 && isFinite(t.ts)) map.set(t.id, { id: t.id, cat: t.cat, amt, note: String(t.note || ''), ts: +t.ts });
+    });
+    const bs = b.settings || {};
+    const settings = (bs.updated || 0) > (a.settings.updated || 0) ? Object.assign({ currency: '$', budget: 0 }, bs) : a.settings;
+    return { tx: [...map.values()], deleted, settings };
+  }
+  const gh = (path, opts = {}) => fetch('https://api.github.com' + path, Object.assign({ cache: 'no-store' }, opts, {
+    headers: Object.assign({ Accept: 'application/vnd.github+json', Authorization: 'Bearer ' + sync.token }, opts.headers || {})
+  }));
+  function httpErr(status) {
+    if (status === 401) return 'Token rejected or expired — create a new token';
+    if (status === 403) return 'Access denied — token needs Contents: Read and write on the data repo';
+    return 'GitHub error ' + status;
+  }
+  function scheduleSync() { if (!isSynced()) return; clearTimeout(syncTimer); syncTimer = setTimeout(() => syncNow(false), 1200); }
+
+  async function syncNow(manual) {
+    if (!isSynced()) return;
+    if (syncBusy) { syncAgain = true; return; }
+    syncBusy = true; setSyncState('busy');
+    try {
+      let done = false;
+      for (let attempt = 0; attempt < 3 && !done; attempt++) {
+        const url = `/repos/${sync.repo}/contents/${sync.path}`;
+        const r = await gh(url);
+        let remote = { tx: [], deleted: {}, settings: {} }, sha = null;
+        if (r.status === 200) {
+          const j = await r.json(); let text;
+          if (j.content) text = dec(j.content);
+          else text = await (await gh(url, { headers: { Accept: 'application/vnd.github.raw+json' } })).text();
+          try { remote = JSON.parse(text); } catch (e) { throw new Error('data.json in the repo isn’t valid JSON'); }
+          sha = j.sha;
+        } else if (r.status === 404) {
+          const rr = await gh(`/repos/${sync.repo}`);
+          if (rr.status === 404) throw new Error('Repo not found — check the name, and that the token has access to it');
+          if (!rr.ok) throw new Error(httpErr(rr.status));
+        } else throw new Error(httpErr(r.status));
+
+        const merged = mergeDB(db, remote);
+        const mergedC = canon(merged);
+        const localChanged = mergedC !== canon(db);
+        db.tx = merged.tx; db.deleted = merged.deleted; db.settings = merged.settings;
+        if (localChanged) { save(true); render(); }
+
+        if (!sha || mergedC !== canon({ tx: remote.tx, deleted: remote.deleted, settings: remote.settings })) {
+          const body = { message: 'Tally sync ' + new Date().toISOString(), content: enc(mergedC) };
+          if (sha) body.sha = sha;
+          const pr = await gh(url, { method: 'PUT', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) });
+          if (pr.status === 409 || pr.status === 422) continue; // changed meanwhile — re-merge and retry
+          if (!pr.ok) throw new Error(httpErr(pr.status));
+        }
+        done = true;
+      }
+      if (!done) throw new Error('Sync conflict — will retry');
+      setSyncState('ok', 'Synced ' + new Date().toLocaleTimeString(undefined, { hour: 'numeric', minute: '2-digit' }));
+      if (manual) toast('Synced with GitHub');
+    } catch (e) {
+      const offline = /fetch|network|load failed/i.test(e.message || '');
+      setSyncState('err', offline ? 'Offline — will sync when you’re back online' : e.message);
+      if (manual) toast(offline ? 'Offline — try again later' : 'Sync failed — see Data & Settings');
+    }
+    syncBusy = false;
+    if (syncAgain) { syncAgain = false; scheduleSync(); }
+  }
+  $('btnSyncSave').addEventListener('click', () => {
+    const repo = $('syncRepo').value.trim().replace(/^https?:\/\/github\.com\//i, '').replace(/\.git$/, '').replace(/\/+$/, '');
+    const token = $('syncToken').value.trim() || sync.token;
+    if (!/^[\w.-]+\/[\w.-]+$/.test(repo) || !token) { toast('Enter repo as username/repo and paste your token'); return; }
+    sync.repo = repo; sync.token = token; persistSync();
+    $('syncToken').value = ''; $('syncToken').placeholder = 'Token saved ✓ (paste a new one to replace)';
+    syncNow(true);
+  });
+  $('btnSyncOff').addEventListener('click', () => {
+    sync.repo = ''; sync.token = ''; persistSync();
+    $('syncRepo').value = ''; $('syncToken').value = ''; $('syncToken').placeholder = 'Access token (github_pat_…)';
+    setSyncState('off'); toast('Disconnected — local data kept');
+  });
+  document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'visible') syncNow(false); });
+  window.addEventListener('online', () => syncNow(false));
+
+  /* ---------- Render ---------- */
+  function render() {
+    $('todayLabel').textContent = new Date().toLocaleDateString(undefined, { weekday: 'long', month: 'long', day: 'numeric' });
+    if (tab === 'log') renderLog();
+    else if (tab === 'insights') renderInsights();
+    else renderHistory();
+  }
+
+  setTab('log');
+  paintSync();
+  syncNow(false);
+  if (!storageOK) toast('Storage unavailable — data won’t persist');
+})();
+</script>
+</body>
+</html>
